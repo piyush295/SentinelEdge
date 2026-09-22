@@ -1,0 +1,21 @@
+{
+  "dataset": "Kaggle subhajournal/phishingemails",
+  "model": "TF-IDF (1-2 gram, 50k feats) + Logistic Regression",
+  "n_total": 18631,
+  "phishing_ratio": 0.3923,
+  "test_accuracy": 0.971,
+  "roc_auc": 0.9963,
+  "train_seconds": 12.16,
+  "inference_ms_per_email": 0.2336,
+  "confusion_matrix_safe_phish": [
+    [
+      2190,
+      75
+    ],
+    [
+      33,
+      1429
+    ]
+  ],
+  "note": "PoC runs fully offline on CPU. In the product this compact model is quantized and offloaded to the Snapdragon Hexagon NPU, and paired with an on-device LLM (Qualcomm AI Hub GenieX) that explains each verdict."
+}
